@@ -92,6 +92,3 @@
 ![This is a alt text.](/img%20md/trim.png)
 >Метод trim() удаляет пробельные символы с начала и конца строки.
 
-# JavaScript Number methods
-
-* Math.round(), ceil(), floor()
