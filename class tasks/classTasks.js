@@ -37,6 +37,6 @@ console.log(combination(2, 3, 4, 5));
 
 
 // Test -------------------------------------------------------------
-let a 
-let b = isNaN(a)
-console.log(b);
+let a = "SoftClub"
+a = a.repeat(3)
+console.log(a);
