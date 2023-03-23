@@ -129,3 +129,113 @@ console.log(sayHelloBye("Tomi", 0));
 console.log(sayHelloBye("jose", 1));
 
 // 17 Reverse the Case--------------------------------------------------------
+function capToFront(str) {
+  let a = str.toUpperCase().split("");
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] == str[i]) a[i] = a[i].toLowerCase();
+  }
+  return a.join("");
+}
+console.log(capToFront("Happy Birthday"));
+console.log(capToFront("MANY THANKS"));
+
+// Find Nemo-----------------------------------------------------------
+function findNemo(str) {
+  let cnt = 0;
+  str = str.split(" ");
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == "Nemo") cnt = i + 1;
+  }
+  return `I found Nemo at ${cnt}!`;
+}
+console.log(findNemo("I am finding Nemo !"));
+console.log(findNemo("Nemo is me"));
+
+// How Many Vowels?---------------------------------------------------------
+function countVowels(str) {
+  let cnt = 0;
+  str = str.split("");
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == 'a' ||
+      str[i] == 'e' ||
+      str[i] == 'i' ||
+      str[i] == 'o' ||
+      str[i] == 'u' ||
+      str[i] == 'y' ||
+
+      str[i] == 'A' ||
+      str[i] == 'E' ||
+      str[i] == 'I' ||
+      str[i] == 'O' ||
+      str[i] == 'U' ||
+      str[i] == 'Y'
+    )
+      cnt++;
+  }
+
+  return cnt;
+}
+console.log(countVowels("Celebration"));
+console.log(countVowels("Palm"));
+console.log(countVowels("Prediction"));
+
+// find the Amount of potatoes-------------------------------------------------
+function potatoes(str) {
+  let cnt = 0
+  str = str.replaceAll("potato", '*').split("")
+  for(let i = 0; i < str.length; i++){
+    if(str[i]=='*') cnt ++
+  }
+  return cnt
+}
+console.log(potatoes("potato"));
+console.log(potatoes("potatopotato"));
+console.log(potatoes("potatoapple"));
+
+
+
+// Capitalize the Firse Letter of Each Word----------------------------------------
+function makeTitle(str){
+  str = str.split(" ")
+  let rez = ""
+  for(let i = 0; i < str.length; i++){
+    rez +=str[i].charAt(0).toUpperCase() + str[i].slice(1)+" "
+  }
+  return rez
+}
+console.log(makeTitle("This is a title"));
+console.log(makeTitle("capitalize every word"));
+console.log(makeTitle("I Like Pizza"));
+console.log(makeTitle("PIZZA PIZZA"));
+
+
+
+
+// Dashed Vowels----------------------------------------------------------------------
+function dashed (str) {
+  let v = ""
+  let m = '-'
+  for(let i = 0; i < str.length; i++){
+    if (
+      str[i] == 'a' ||
+      str[i] == 'e' ||
+      str[i] == 'i' ||
+      str[i] == 'o' ||
+      str[i] == 'u' ||
+      str[i] == 'y' ||
+
+      str[i] == 'A' ||
+      str[i] == 'E' ||
+      str[i] == 'I' ||
+      str[i] == 'O' ||
+      str[i] == 'U' ||
+      str[i] == 'Y'
+    )
+      { v += m + str[i] + m }
+    else { v += str[i] }
+  }
+  return v
+}
+console.log(dashed("Edabit"));
+console.log(dashed("Carpe Diem"));

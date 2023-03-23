@@ -9,7 +9,7 @@ console.log(repetition("cherry", 2));
 
 // Task 2----------------------------------------------------------------------------
 function hackerSpeak(str) {
-  let z = 0;
+  let z = ""
   for (let i = 0; i < str.length; i++) {
     if (str[i] === "a") z = z + 4;
     else if (str[i] === "i") z = z + 1;
